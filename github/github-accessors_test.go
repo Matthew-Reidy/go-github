@@ -10338,6 +10338,16 @@ func TestInstallationPermissions_GetActions(tt *testing.T) {
 	i.GetActions()
 }
 
+func TestInstallationPermissions_GetActionsVariables(tt *testing.T) {
+	var zeroValue string
+	i := &InstallationPermissions{ActionsVariables: &zeroValue}
+	i.GetActionsVariables()
+	i = &InstallationPermissions{}
+	i.GetActionsVariables()
+	i = nil
+	i.GetActionsVariables()
+}
+
 func TestInstallationPermissions_GetAdministration(tt *testing.T) {
 	var zeroValue string
 	i := &InstallationPermissions{Administration: &zeroValue}
@@ -10466,6 +10476,16 @@ func TestInstallationPermissions_GetOrganizationAdministration(tt *testing.T) {
 	i.GetOrganizationAdministration()
 	i = nil
 	i.GetOrganizationAdministration()
+}
+
+func TestInstallationPermissions_GetOrganizationCustomOrgRoles(tt *testing.T) {
+	var zeroValue string
+	i := &InstallationPermissions{OrganizationCustomOrgRoles: &zeroValue}
+	i.GetOrganizationCustomOrgRoles()
+	i = &InstallationPermissions{}
+	i.GetOrganizationCustomOrgRoles()
+	i = nil
+	i.GetOrganizationCustomOrgRoles()
 }
 
 func TestInstallationPermissions_GetOrganizationCustomProperties(tt *testing.T) {
@@ -23307,6 +23327,16 @@ func TestRepositoryPermissionLevel_GetPermission(tt *testing.T) {
 	r.GetPermission()
 }
 
+func TestRepositoryPermissionLevel_GetRoleName(tt *testing.T) {
+	var zeroValue string
+	r := &RepositoryPermissionLevel{RoleName: &zeroValue}
+	r.GetRoleName()
+	r = &RepositoryPermissionLevel{}
+	r.GetRoleName()
+	r = nil
+	r.GetRoleName()
+}
+
 func TestRepositoryPermissionLevel_GetUser(tt *testing.T) {
 	r := &RepositoryPermissionLevel{}
 	r.GetUser()
@@ -24230,6 +24260,13 @@ func TestRulesetConditions_GetRepositoryName(tt *testing.T) {
 	r.GetRepositoryName()
 	r = nil
 	r.GetRepositoryName()
+}
+
+func TestRulesetConditions_GetRepositoryProperty(tt *testing.T) {
+	r := &RulesetConditions{}
+	r.GetRepositoryProperty()
+	r = nil
+	r.GetRepositoryProperty()
 }
 
 func TestRulesetLink_GetHRef(tt *testing.T) {

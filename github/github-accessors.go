@@ -8822,6 +8822,14 @@ func (i *InstallationPermissions) GetActions() string {
 	return *i.Actions
 }
 
+// GetActionsVariables returns the ActionsVariables field if it's non-nil, zero value otherwise.
+func (i *InstallationPermissions) GetActionsVariables() string {
+	if i == nil || i.ActionsVariables == nil {
+		return ""
+	}
+	return *i.ActionsVariables
+}
+
 // GetAdministration returns the Administration field if it's non-nil, zero value otherwise.
 func (i *InstallationPermissions) GetAdministration() string {
 	if i == nil || i.Administration == nil {
@@ -8924,6 +8932,14 @@ func (i *InstallationPermissions) GetOrganizationAdministration() string {
 		return ""
 	}
 	return *i.OrganizationAdministration
+}
+
+// GetOrganizationCustomOrgRoles returns the OrganizationCustomOrgRoles field if it's non-nil, zero value otherwise.
+func (i *InstallationPermissions) GetOrganizationCustomOrgRoles() string {
+	if i == nil || i.OrganizationCustomOrgRoles == nil {
+		return ""
+	}
+	return *i.OrganizationCustomOrgRoles
 }
 
 // GetOrganizationCustomProperties returns the OrganizationCustomProperties field if it's non-nil, zero value otherwise.
@@ -20078,6 +20094,14 @@ func (r *RepositoryPermissionLevel) GetPermission() string {
 	return *r.Permission
 }
 
+// GetRoleName returns the RoleName field if it's non-nil, zero value otherwise.
+func (r *RepositoryPermissionLevel) GetRoleName() string {
+	if r == nil || r.RoleName == nil {
+		return ""
+	}
+	return *r.RoleName
+}
+
 // GetUser returns the User field.
 func (r *RepositoryPermissionLevel) GetUser() *User {
 	if r == nil {
@@ -20852,6 +20876,14 @@ func (r *RulesetConditions) GetRepositoryName() *RulesetRepositoryNamesCondition
 		return nil
 	}
 	return r.RepositoryName
+}
+
+// GetRepositoryProperty returns the RepositoryProperty field.
+func (r *RulesetConditions) GetRepositoryProperty() *RulesetRepositoryPropertyConditionParameters {
+	if r == nil {
+		return nil
+	}
+	return r.RepositoryProperty
 }
 
 // GetHRef returns the HRef field if it's non-nil, zero value otherwise.
